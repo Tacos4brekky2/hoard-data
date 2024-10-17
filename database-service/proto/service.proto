@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option go_package = "svc/pkg/userpb";
+
+service DatabaseService {
+    rpc ReadData (UserRequest) returns (Document);
+    rpc WriteData (Document) returns (Response);
+}
+
+message UserRequest {
+    string id = 1;
+    map<string, string> query = 2;
+}
+
+message Document {
+    string id = 1;
+    map<string, string> meta = 2;
+    map<string, string> data = 3;
+}
+
+message Response {
+    string id = 1;
+    map<string, string> meta = 2;
+    map<string, string> data = 3;
+}

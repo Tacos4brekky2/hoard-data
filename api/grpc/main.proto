@@ -1,0 +1,17 @@
+syntax = "proto3";
+option go_package = "github.com/Tacos4brekky2/gomarketdataservice/internal/gogrpc";
+
+service MarketDataService {
+  rpc GetAssets(AssetRequest) returns (AssetResponse);
+}
+import "google/protobuf/any.proto";
+
+message AssetRequest {
+    string id = 1;
+    repeated string symbols = 2; 
+}
+
+message AssetResponse {
+    string id = 1;
+    google.protobuf.Any payload = 2; 
+}

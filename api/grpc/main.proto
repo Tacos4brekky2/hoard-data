@@ -1,5 +1,5 @@
 syntax = "proto3";
-option go_package = "github.com/Tacos4brekky2/gomarketdataservice/internal/gogrpc";
+option go_package = "github.com/Tacos4brekky2/hoard-data/api/gogrpc";
 
 service MarketDataService {
   rpc GetAssets(AssetRequest) returns (AssetResponse);

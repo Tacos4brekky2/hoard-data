@@ -1,4 +1,4 @@
-module github.com/Tacos4brekky2/gomarketdataservice
+module github.com/Tacos4brekky2/hoard-data
 
 go 1.23.2
 
